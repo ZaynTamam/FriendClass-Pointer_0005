@@ -41,3 +41,20 @@ public:
         cout << "Sisi 1    : "; cin >> s1;
         cout << "Sisi 2    : "; cin >> s2;
     }
+
+    double hitungLuas() {
+        return 0.5 * d1 * d2;
+    }
+
+    double hitungKeliling() {
+        return 2 * (s1 + s2);
+    }
+
+    // Memberikan izin akses ke friend function yang didefinisikan di luar
+    friend double hitungKelilingBK(BelahKetupat bk, LayangLayang ll);
+
+    void output() {
+        cout << "Luas Layang-Layang    : " << hitungLuas() << endl;
+        cout << "Keliling Layang-Layang: " << hitungKeliling() << endl;
+    }
+};
