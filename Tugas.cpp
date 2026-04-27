@@ -20,3 +20,11 @@ public:
     double hitungLuas() {
         return 0.5 * d1 * d2;
     }
+
+    // Prototipe friend function
+    friend double hitungKelilingBK(BelahKetupat bk, LayangLayang ll);
+
+    void output() {
+        cout << "Luas Belah Ketupat: " << hitungLuas() << endl;
+    }
+};
