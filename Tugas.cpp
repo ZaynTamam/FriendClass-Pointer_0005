@@ -58,3 +58,25 @@ public:
         cout << "Keliling Layang-Layang: " << hitungKeliling() << endl;
     }
 };
+
+double hitungKelilingBK(BelahKetupat bk, LayangLayang ll) {
+    return 4 * bk.sisi;
+}
+
+int main() {
+    // Akses hanya melalui object
+    BelahKetupat bk;
+    LayangLayang ll;
+
+    bk.input();
+    ll.input();
+
+    cout << "\n--- Hasil Perhitungan ---" << endl;
+    bk.output();
+    // Memanggil friend function
+    cout << "Keliling Belah Ketupat: " << hitungKelilingBK(bk, ll) << endl;
+    
+    ll.output();
+
+    return 0;
+}
